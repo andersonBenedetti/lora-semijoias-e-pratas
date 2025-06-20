@@ -1,187 +1,105 @@
 #footer {
-  background-color: $background-input;
+  background-color: $secondary-color;
 
-  .content {
-    padding: 30px 0 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 50px;
+    padding: 50px 0;
 
-    .column-1 {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
-      .logo {
-        max-width: 135px;
-        margin-left: -12px;
-      }
-
+    .footer-column {
       p {
+        @include text-footer;
         color: $text-gray;
-        line-height: 1;
-      }
 
-      .link {
-        @include link-footer;
-        color: $text-gray-two;
-        line-height: 1;
-      }
-
-      .link-number {
-        @include link-number;
-        line-height: 1;
-        color: $text-gray-two;
-      }
-    }
-
-    nav {
-      h3 {
-        @include title-footer;
-        line-height: 1;
-        color: $text-gray-two;
-        margin-bottom: 15px;
-      }
-
-      ul {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        a {
-          display: block;
-          width: max-content;
-          @include link-list;
-          line-height: 1;
-          position: relative;
-          overflow: hidden;
-          color: $text-gray-two;
-          transition: color 0.3s ease;
-
-          &::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: -1px;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, $green, $black);
-            transform: translateX(-100%);
-            transition: transform 0.4s ease-in-out;
-          }
-
-          &:hover {
-            color: $green;
-
-            &::before {
-              transform: translateX(0);
-            }
-          }
-        }
-      }
-    }
-
-    .infos {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-
-      h3 {
-        @include title-footer;
-        line-height: 1;
-        color: $text-gray-two;
-      }
-
-      p {
-        @include link-footer;
-        line-height: 1;
-        color: $text-gray-two;
-      }
-
-      .certificates {
-        margin-top: 10px;
-
-        p {
-          @include title-certificates;
-          line-height: 1;
-          margin-bottom: 10px;
-        }
-
-        > div {
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          gap: 10px;
-
-          img {
-            height: 50px;
-            object-fit: contain;
-          }
-        }
-      }
-    }
-  }
-
-  .bottom {
-    background-color: $white;
-    padding: 10px;
-
-    p {
-      @include text-bottom;
-      text-align: center;
-
-      a {
-        color: $black;
-      }
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  #footer {
-    .content {
-      flex-direction: column;
-
-      .column-1 {
-        align-items: center;
-
-        .logo {
+        @media (max-width: 1024px) {
           margin: 0 auto;
         }
       }
 
-      nav {
-        text-align: center;
+      h3 {
+        @include title-footer;
+        color: $primary-color;
+      }
 
-        ul {
-          align-items: center;
+      a {
+        display: block;
+        width: max-content;
+        @include text-footer;
+        color: $text-gray;
+        padding: 2px 0;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $primary-color;
+        }
+
+        @media (max-width: 1024px) {
+          margin: 0 auto;
         }
       }
 
-      .infos {
-        align-items: center;
-        text-align: center;
+      &:first-child {
+        p {
+          max-width: 217px;
 
-        .certificates {
-          > div {
-            justify-content: center;
+          &:first-child {
+            margin-bottom: 70px;
+
+            @media (max-width: 1024px) {
+              margin-bottom: 20px;
+            }
           }
+        }
+      }
+
+      @media (max-width: 1024px) {
+        text-align: center;
+      }
+    }
+  }
+
+  .footer-infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+
+    p {
+      @include text-footer;
+
+      a {
+        color: $black;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $primary-color;
         }
       }
     }
 
-    .bottom {
-      background-color: $white;
+    .footer-social {
+      display: flex;
+      align-items: center;
+      gap: 10px;
 
-      p {
-        @include text-bottom;
-        text-align: center;
+      a {
+        transition: transform 0.3s ease;
 
-        a {
-          color: $black;
+        &:hover {
+          transform: scale(1.1);
         }
       }
+    }
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
     }
   }
 }
