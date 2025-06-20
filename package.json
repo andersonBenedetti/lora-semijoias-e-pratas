@@ -1,0 +1,9 @@
+{
+  "name": "lora",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass --watch scss/style.scss:style.css",
+    "watch": "browser-sync start --proxy http://quitanda.local --files 'style.css, **/*.php, **/*.js' --open --no-ui",
+    "dev": "concurrently \"npm run sass\" \"npm run watch\""
+  }
+}

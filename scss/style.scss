@@ -1,0 +1,31 @@
+/*
+Theme Name: LoraTheme
+Theme URI: https://blumewebstudio.com.br
+Author: Blume Web Studio
+Author URI: https://blumewebstudio.com.br
+Description: Tema criado para a Lorá Semijóias e Pratas.
+Version: 1.0
+*/
+
+@import "themes/colors";
+
+@import "base/typography";
+@import "base/geral";
+
+@import "components/header";
+@import "components/footer";
+@import "components/buttons";
+@import "components/product-list";
+@import "components/input-search";
+@import "components/quantity";
+@import "components/whats-float";
+
+@import "pages/page-home";
+@import "pages/page-about-us";
+@import "pages/archive-product";
+@import "pages/single-product";
+@import "pages/cart";
+@import "pages/index";
+@import "pages/checkout";
+@import "pages/account";
+@import "pages/page-policies";

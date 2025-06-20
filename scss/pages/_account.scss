@@ -1,0 +1,96 @@
+.woocommerce-MyAccount-navigation {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 50px;
+
+  li {
+    background-color: $background-input;
+    border-bottom: 2px solid $white;
+    transition: background-color 0.3s ease;
+
+    &.is-active,
+    &:hover {
+      background-color: $background-top;
+    }
+
+    a {
+      display: block;
+      color: $black;
+      padding: 10px;
+    }
+
+    &.woocommerce-MyAccount-navigation-link--downloads {
+      display: none;
+    }
+  }
+}
+
+.woocommerce-MyAccount-content {
+  width: 65%;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1.5;
+
+  a {
+    color: $black;
+    font-weight: bold;
+  }
+
+  .woocommerce-Button {
+    background-color: $black;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: $white;
+  }
+
+  .woocommerce-Address-title {
+    text-align: start;
+    letter-spacing: normal;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26.44px;
+    }
+
+    a {
+      font-size: 16px;
+      line-height: 1;
+      text-decoration: underline;
+    }
+  }
+
+  .woocommerce-EditAccountForm {
+    input {
+      border: 1px solid $black !important;
+      border-radius: 4px;
+      font-size: 1em;
+      height: 50px;
+      line-height: 1em;
+      padding: 1em 0.5em;
+      width: 100%;
+    }
+  }
+}
+
+.woocommerce-MyAccount-navigation:after,
+.woocommerce-MyAccount-content:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media (max-width: 768px) {
+  .woocommerce-MyAccount-navigation,
+  .woocommerce-MyAccount-content {
+    width: 100%;
+    display: block;
+  }
+
+  .woocommerce-MyAccount-navigation {
+    margin-bottom: 50px;
+  }
+}

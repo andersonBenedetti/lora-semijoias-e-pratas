@@ -1,0 +1,57 @@
+.gramas-label {
+  margin-bottom: 10px;
+}
+
+.quantity,
+.custom-gramas {
+  display: flex;
+  align-items: center;
+  float: left;
+
+  @media (max-width: 758px) {
+    float: none;
+  }
+
+  input.qty::-webkit-outer-spin-button,
+  input.qty::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input.qty[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  .qty-minus,
+  .qty-plus,
+  .gramas-minus,
+  .gramas-plus {
+    color: $text-gray;
+    border: 1px solid $border-select;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+  }
+
+  .qty-minus:hover,
+  .qty-plus:hover,
+  .gramas-minus:hover,
+  .gramas-plus:hover {
+    background-color: $border-select;
+  }
+
+  input.qty {
+    width: 50px;
+    height: 44px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid $border-select;
+    border-radius: 0;
+  }
+}

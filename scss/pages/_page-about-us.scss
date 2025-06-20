@@ -1,0 +1,226 @@
+#pg-about {
+  .section-intro {
+    background-color: $background-top;
+    padding: 50px 20px;
+
+    @media (max-width: 768px) {
+      padding: 100px 20px 50 20px;
+    }
+
+    .content-intro {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+
+      .intro-logo {
+        max-width: 176px;
+        height: auto;
+        object-fit: cover;
+      }
+
+      h1 {
+        @include title-cat;
+        color: $green;
+      }
+
+      p {
+        @include description-cat;
+        color: $green;
+      }
+    }
+  }
+
+  .section-infos {
+    padding: 50px 0;
+
+    .content-infos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+
+      @media (max-width: 1024px) {
+        flex-wrap: wrap;
+      }
+
+      .texts {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 550px;
+
+        h2 {
+          @include title-cat;
+          color: $green;
+        }
+
+        p {
+          @include description-cat;
+          color: $green;
+        }
+      }
+
+      .cards-infos {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .item {
+          max-width: 720px;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          padding: 20px;
+          background-color: $background-top;
+          border-radius: 10px;
+
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            font-size: 50px;
+          }
+
+          h3 {
+            @include title-feedback;
+            color: $green;
+          }
+
+          p {
+            @include description-cat;
+            color: $green;
+          }
+
+          &:nth-child(2) {
+            background-color: $background-card;
+          }
+
+          &:nth-child(3) {
+            background-color: $background-info;
+          }
+        }
+      }
+    }
+  }
+
+  .section-items {
+    padding: 100px 0;
+
+    @media (max-width: 1024px) {
+      padding: 0;
+    }
+
+    h2 {
+      text-align: center;
+      @include title-cat;
+      color: $green;
+    }
+
+    p.text {
+      text-align: center;
+      @include description-cat;
+      color: $green;
+    }
+
+    .cards-items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: $background-top;
+        padding: 20px;
+        border-radius: 10px;
+
+        &:nth-child(even) {
+          background-color: $background-card;
+        }
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          font-size: 50px;
+        }
+
+        h3 {
+          @include title-feedback;
+          color: $green;
+        }
+
+        p {
+          @include description-cat;
+          color: $green;
+        }
+      }
+    }
+  }
+
+  .categories-list {
+    .top {
+      text-align: center;
+      margin-bottom: 50px;
+
+      @media (max-width: 1024px) {
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        @include title-cat;
+        color: $green;
+      }
+
+      p {
+        @include description-cat;
+        color: $green;
+      }
+    }
+  }
+
+  .section-location {
+    padding: 50px 0;
+
+    @media (max-width: 1024px) {
+      padding: 20px 0;
+    }
+
+    .top {
+      text-align: center;
+
+      h2 {
+        @include title-cat;
+        color: $green;
+      }
+
+      p {
+        color: $text-gray-two;
+      }
+
+      a {
+        @include btn-card-cat;
+        color: $text-gray-two;
+        text-decoration: underline;
+      }
+    }
+
+    .maps-location {
+      margin-top: 20px;
+    }
+  }
+}
