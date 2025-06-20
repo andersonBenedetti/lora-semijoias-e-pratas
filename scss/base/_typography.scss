@@ -40,6 +40,20 @@ $font-primary: "Livvic", sans-serif;
   letter-spacing: 0.5px;
 }
 
+@mixin text-footer {
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+@mixin title-footer {
+  font-weight: 700;
+  font-size: 0.875em;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
 @mixin link-number {
   font-size: 1.125em;
   font-weight: 800;

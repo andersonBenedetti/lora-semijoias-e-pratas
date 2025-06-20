@@ -1,61 +1,96 @@
 <?php
-$footer_menu_items = [
-    ['label' => 'Sobre a Quitanda', 'url' => '/sobre-nos'],
-    ['label' => 'Entre em contato', 'url' => '/entre-em-contato'],
-    ['label' => 'Políticas de Privacidade', 'url' => '/politicas-de-privacidade'],
-    ['label' => 'Políticas de Troca e Devolução', 'url' => '/politicas-de-troca-e-devolucao'],
-    ['label' => 'Termos e Condições', 'url' => '/termos-e-condicoes'],
+$footer_menu_semi = [
+    ['label' => 'Brincos', 'url' => '#'],
+    ['label' => 'Anéis', 'url' => '#'],
+    ['label' => 'Colares', 'url' => '#'],
+    ['label' => 'Pulseiras', 'url' => '#'],
+    ['label' => 'Pingentes', 'url' => '#'],
+    ['label' => 'Braceletes', 'url' => '#'],
+];
+
+$footer_menu_prata = [
+    ['label' => 'Brincos', 'url' => '#'],
+    ['label' => 'Anéis', 'url' => '#'],
+    ['label' => 'Colares', 'url' => '#'],
+    ['label' => 'Pulseiras', 'url' => '#'],
+    ['label' => 'Pingentes', 'url' => '#'],
+    ['label' => 'Braceletes', 'url' => '#'],
+];
+
+$footer_menu_nav = [
+    ['label' => 'Minha Conta', 'url' => '#'],
+    ['label' => 'Meus pedidos ', 'url' => '#'],
+    ['label' => 'Políticas de Privacidade', 'url' => '#'],
+    ['label' => 'Políticas de Entrega', 'url' => '#'],
 ];
 ?>
 
-<footer id="footer" role="contentinfo">
+<footer id="footer">
     <div class="container">
-        <div class="content">
-            <div class="column-1">
-                <a href="/" class="logo" aria-label="Voltar para página inicial">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-principal.svg"
-                        alt="Logo Quitanda - Voltar para página inicial" loading="lazy">
-                </a>
-                <p>CNPJ: 30.347.742/0001-59</p>
-                <a href="mailto:contato@mercadoquitanda.com.br" aria-label="Envie um email para contato"
-                    class="link">contato@mercadoquitanda.com.br</a>
-                <a href="tel:+5548991219619" aria-label="Ligar para o atendimento" class="link-number">(48)
-                    99121-9619</a>
+        <div class="footer-content">
+            <div class="footer-column">
+                <p>Rua Desembargador Pedro Silva, 540 - Sala 801 - Centro, Criciúma - SC, 88802-186</p>
+                <p>contato@lorasemijoias.com.br
+                    (48) 99976-3251</p>
             </div>
 
-            <nav aria-labelledby="footer-nav">
-                <h3 id="footer-nav">Navegue</h3>
+            <div class="footer-column">
+                <h3>Semijóias</h3>
                 <ul>
                     <?php
-                    foreach ($footer_menu_items as $item) {
+                    foreach ($footer_menu_semi as $item) {
                         echo '<li><a href="' . esc_url($item['url']) . '" aria-label="' . esc_html($item['label']) . '">' . esc_html($item['label']) . '</a></li>';
                     }
                     ?>
                 </ul>
-            </nav>
+            </div>
 
-            <div class="infos">
-                <h3>Informações</h3>
-                <p>Endereço: </br>Rua Almirante Barroso, 535 - sala 02, Criciúma 88802-249</p>
-                <p>Horário de Atendimento: </br>Segunda à Sexta das 9h às 19h30 e Sábado das 9h às 13h</p>
-                <div class="certificates">
-                    <p>Selos e certificados:</p>
-                    <div>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/produto-organico.webp"
-                            alt="Produto Orgânico Brasil" loading="lazy">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ssl.webp" alt="SSL" loading="lazy">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ibd.webp" alt="IBD" loading="lazy">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/glutenfree.webp" alt="Glutenfree"
-                            loading="lazy">
-                    </div>
-                </div>
+            <div class="footer-column">
+                <h3>Prata 925</h3>
+                <ul>
+                    <?php
+                    foreach ($footer_menu_prata as $item) {
+                        echo '<li><a href="' . esc_url($item['url']) . '" aria-label="' . esc_html($item['label']) . '">' . esc_html($item['label']) . '</a></li>';
+                    }
+                    ?>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Navegue</h3>
+                <ul>
+                    <?php
+                    foreach ($footer_menu_nav as $item) {
+                        echo '<li><a href="' . esc_url($item['url']) . '" aria-label="' . esc_html($item['label']) . '">' . esc_html($item['label']) . '</a></li>';
+                    }
+                    ?>
+                </ul>
             </div>
         </div>
-    </div>
 
-    <div class="bottom">
-        <p>Mercado Quitanda. Todos os direitos reservados. Desenvolvido por <a href="https://blumewebstudio.com.br/"
-                target="_blank" rel="noopener noreferrer">Blume Web Studio</a></p>
+        <div class="footer-infos">
+            <p>Lorá. Todos os direitos reservados.</p>
+
+            <div class="footer-social">
+                <a href="#">
+                    <?php include get_stylesheet_directory() . '/img/icons/qlementine-icons_instagram.svg'; ?>
+                </a>
+
+                <a href="#">
+                    <?php include get_stylesheet_directory() . '/img/icons/qlementine-icons_facebook.svg'; ?>
+                </a>
+
+                <a href="#">
+                    <?php include get_stylesheet_directory() . '/img/icons/hugeicons_pinterest.svg'; ?>
+                </a>
+
+                <a href="#">
+                    <?php include get_stylesheet_directory() . '/img/icons/ic_baseline-whatsapp.svg'; ?>
+                </a>
+            </div>
+
+            <p>Desenvolvido por <a href="#">Blume Web Studio</a></p>
+        </div>
     </div>
 </footer>
 
