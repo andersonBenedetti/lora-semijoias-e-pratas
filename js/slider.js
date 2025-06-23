@@ -1,19 +1,18 @@
 jQuery(document).ready(function () {
-  jQuery(".carousel-feedback").slick({
-    autoplay: true,
+  jQuery(".carousel-product").slick({
+    autoplay: false,
     dots: false,
-    arrows: false,
+    arrows: true,
     infinite: true,
     speed: 1000,
-    autoplaySpeed: 2000,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     swipeToSlide: true,
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
     ],
