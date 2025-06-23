@@ -132,6 +132,44 @@
       }
     }
   }
+
+  .section-social {
+    padding-top: 100px;
+
+    .social-top {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+
+      .social-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: max-content;
+        padding: 5px;
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+
+        img {
+          width: 55px;
+          object-fit: contain;
+          transition: transform 0.3s ease;
+        }
+
+        span {
+          @include link-social;
+          color: $primary-color;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {

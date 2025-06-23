@@ -26,6 +26,23 @@
       @include price-product;
       color: $black;
     }
+
+    .login-to-see-price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $btn-product;
+      padding: 10px;
+      @include btn-product;
+      color: $primary-color;
+      text-align: center;
+    }
+  }
+
+  &.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px 20px;
   }
 
   &.carousel-product {

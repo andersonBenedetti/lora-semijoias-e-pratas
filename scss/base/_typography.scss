@@ -96,9 +96,10 @@ $font-primary: "Livvic", sans-serif;
 }
 
 @mixin text-btn {
-  font-size: 0.875em;
-  font-weight: 800;
-  line-height: 19.88px;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1;
+  letter-spacing: 0.11px;
 }
 
 @mixin title-section {
@@ -158,25 +159,24 @@ $font-primary: "Livvic", sans-serif;
 }
 
 @mixin title-cat {
-  font-size: 2em;
-  font-weight: 800;
-  line-height: 45.44px;
-
-  @media (max-width: 768px) {
-    line-height: 1;
-  }
+  font-weight: 400;
+  font-size: 4.438em;
+  line-height: 1;
+  letter-spacing: 0.11px;
 }
 
 @mixin description-cat {
-  font-size: 1em;
-  font-weight: 500;
-  line-height: 22.72px;
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 @mixin text-select {
+  font-weight: 300;
   font-size: 0.875em;
-  font-weight: 700;
-  line-height: 24px;
+  line-height: 1;
+  letter-spacing: 2px;
 }
 
 @mixin title-single {
@@ -194,4 +194,18 @@ $font-primary: "Livvic", sans-serif;
   @media (max-width: 1024px) {
     font-size: 1em;
   }
+}
+
+@mixin link-social {
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+}
+
+@mixin btn-product {
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1;
+  letter-spacing: 0;
 }
