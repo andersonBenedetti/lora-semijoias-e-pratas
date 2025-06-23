@@ -45,146 +45,14 @@
     }
   }
 
-  .infos-shop {
-    padding: 20px 0;
-
-    .infos-list {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      overflow: hidden;
-
-      .info-item {
-        max-width: 240px;
-        min-width: 240px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        background-color: $background-input;
-        padding: 20px 10px;
-        border-radius: 10px;
-
-        .icon {
-          width: 34px;
-          min-width: 34px;
-          height: 34px;
-
-          img {
-            width: 100%;
-            object-fit: contain;
-          }
-        }
-
-        .title {
-          @include text-top;
-        }
-
-        .description {
-          @include text-description;
-        }
-      }
-    }
-  }
-
   .products-shop {
     padding: 50px 0;
 
-    &.secondary {
-      background-color: $background-input;
-    }
-
-    .top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
+    .title-section {
       margin-bottom: 20px;
 
-      h2 {
-        @include title-section;
-
-        @media (max-width: 768px) {
-          text-align: center;
-        }
-      }
-    }
-
-    .btn {
-      &.mbl {
-        margin: 20px auto 0 auto;
-        display: none;
-      }
-
-      @media (max-width: 768px) {
-        &.mbl {
-          display: flex;
-        }
-
-        &.desk {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .banner-shop {
-    padding: 50px 0;
-
-    a {
-      display: block;
-      width: 100%;
-
-      img {
-        width: 100%;
-        object-fit: contain;
-      }
-    }
-  }
-
-  .feedback-section {
-    padding: 50px 0;
-
-    h2 {
-      @include title-section;
-      margin-bottom: 20px;
-    }
-
-    .feedback-list {
-      .slick-slide {
-        margin: 0 10px;
-      }
-
-      .slick-list {
-        margin: 0 -10px;
-      }
-
-      .feedback-item {
-        background-color: $background-input;
-        border-radius: 10px;
-        padding: 20px;
-
-        .feedback-header {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          margin-bottom: 20px;
-
-          .feedback-img {
-            width: 66px;
-            height: 66px;
-            object-fit: cover;
-            overflow: hidden;
-            border-radius: 50%;
-
-            .feedback-info {
-              .feedback-title {
-                @include title-feedback;
-              }
-            }
-          }
-        }
+      @media (max-width: 1024px) {
+        margin-bottom: 30px;
       }
     }
   }
@@ -199,24 +67,6 @@
 
       .dkp {
         display: none;
-      }
-    }
-
-    .infos-shop {
-      .infos-list {
-        justify-content: flex-start;
-        gap: 20px;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-
-        &::-webkit-scrollbar {
-          display: none;
-        }
-
-        .info-item {
-          flex: 0 0 calc(80% - 20px);
-          scroll-snap-align: start;
-        }
       }
     }
   }

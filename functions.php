@@ -44,16 +44,15 @@ function format_products($products)
 
 function lora_product_list($products)
 {
-    echo '<ul class="products-list">';
+    echo '<ul class="products-list carousel-product">';
     foreach ($products as $product) { ?>
         <li class="product-item">
             <a href="<?= esc_url($product['link']); ?>">
-                <div class="product-info">
+                <div class="product-img">
                     <img src="<?= esc_url($product['img']); ?>" alt="<?= esc_attr($product['name']); ?>" />
-                    <h3><?= esc_html($product['name']); ?></h3>
-                    <p class="product-price"><?= $product['price']; ?></p>
-                    <span class="btn btn-product">Ver mais detalhes</span>
                 </div>
+                <h3 class="product-title"><?= esc_html($product['name']); ?></h3>
+                <p class="product-price"><?= $product['price']; ?></p>
             </a>
         </li>
     <?php }
@@ -98,7 +97,6 @@ function custom_post_type($post_type, $singular_name, $plural_name)
 
 add_action('init', function () {
     custom_post_type('carrossel', 'Carrossel', 'Carrossel');
-    custom_post_type('feedbacks', 'Feedbacks', 'Feedbacks');
 });
 
 function enqueue_slick_scripts()

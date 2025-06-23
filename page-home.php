@@ -7,27 +7,26 @@
 <?php
 $status = current_user_can('administrator') ? ['publish', 'private'] : 'publish';
 
-$products_hortifruti = wc_get_products([
-    'limit' => 5,
+$products_lancamentos = wc_get_products([
+    'limit' => -1,
     'orderby' => 'date',
     'order' => 'DESC',
-    'category' => ['hortifruti'],
     'status' => $status,
     'stock_status' => 'instock',
 ]);
 
-$products_mercearia = wc_get_products([
-    'limit' => 5,
+$products_prata = wc_get_products([
+    'limit' => -1,
     'orderby' => 'date',
     'order' => 'DESC',
-    'category' => ['mercearia'],
+    'category' => ['prata-925'],
     'status' => $status,
     'stock_status' => 'instock',
 ]);
 
 $data = [];
-$data['hortifruti'] = format_products($products_hortifruti);
-$data['mercearia'] = format_products($products_mercearia);
+$data['lancamentos'] = format_products($products_lancamentos);
+$data['prata-925'] = format_products($products_prata);
 ?>
 
 <main id="pg-home">
@@ -60,30 +59,24 @@ $data['mercearia'] = format_products($products_mercearia);
 
     <section class="products-shop">
         <div class="container">
-            <div class="top">
-                <h2>Orgânicos e fresquinhos</h2>
-                <a href="/categoria-produto/hortifruti/" class="btn">Ver todos os ítens</a>
-            </div>
+            <h2 class="title-section">Lançamentos</h2>
 
-            <?php if (!empty($data['hortifruti'])): ?>
-                <?php lora_product_list($data['hortifruti']); ?>
+            <?php if (!empty($data['lancamentos'])): ?>
+                <?php lora_product_list($data['lancamentos']); ?>
             <?php else: ?>
-                <p><?php _e('Nenhum produto encontrado na categoria Hortifruti.'); ?></p>
+                <p><?php _e('Nenhum produto encontrado.'); ?></p>
             <?php endif; ?>
         </div>
     </section>
 
     <section class="products-shop secondary">
         <div class="container">
-            <div class="top">
-                <h2>Mercearia | Tudo para sua despensa</h2>
-                <a href="/categoria-produto/mercearia/" class="btn">Ver todos os ítens</a>
-            </div>
+            <h2 class="title-section">Prata 925</h2>
 
-            <?php if (!empty($data['mercearia'])): ?>
-                <?php lora_product_list($data['mercearia']); ?>
+            <?php if (!empty($data['prata-925'])): ?>
+                <?php lora_product_list($data['prata-925']); ?>
             <?php else: ?>
-                <p><?php _e('Nenhum produto encontrado na categoria Mercearia.'); ?></p>
+                <p><?php _e('Nenhum produto encontrado na categoria Prata 925.'); ?></p>
             <?php endif; ?>
         </div>
     </section>
