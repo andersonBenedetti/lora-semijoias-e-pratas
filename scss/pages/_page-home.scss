@@ -56,6 +56,82 @@
       }
     }
   }
+
+  .section-categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 50px 0;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categories-item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 600px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+
+      @media (max-width: 1024px) {
+        height: 300px;
+      }
+
+      span {
+        @include title-categories;
+        text-transform: uppercase;
+        color: $white;
+        position: relative;
+        z-index: 2;
+        transition: transform 0.4s ease, text-shadow 0.3s ease;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.1);
+        transition: background 0.4s ease;
+        z-index: 1;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+
+        &::before {
+          background: rgba(0, 0, 0, 0.55);
+        }
+
+        span {
+          transform: scale(1.05);
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+      }
+
+      &:nth-child(1) {
+        background-image: url("./img/brincos.webp");
+      }
+
+      &:nth-child(2) {
+        background-image: url("./img/colares.webp");
+      }
+
+      &:nth-child(3) {
+        background-image: url("./img/aneis.webp");
+      }
+
+      &:nth-child(4) {
+        background-image: url("./img/pulseiras.webp");
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
