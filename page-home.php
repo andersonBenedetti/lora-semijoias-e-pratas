@@ -62,7 +62,7 @@ $data['prata-925'] = format_products($products_prata);
             <h2 class="title-section">Lançamentos</h2>
 
             <?php if (!empty($data['lancamentos'])): ?>
-                <?php lora_product_list($data['lancamentos']); ?>
+                <?php lora_product_list($data['lancamentos'], 'carousel-product'); ?>
             <?php else: ?>
                 <p><?php _e('Nenhum produto encontrado.'); ?></p>
             <?php endif; ?>
@@ -81,12 +81,25 @@ $data['prata-925'] = format_products($products_prata);
             <h2 class="title-section">Prata 925</h2>
 
             <?php if (!empty($data['prata-925'])): ?>
-                <?php lora_product_list($data['prata-925']); ?>
+                <?php lora_product_list($data['prata-925'], 'carousel-product'); ?>
             <?php else: ?>
                 <p><?php _e('Nenhum produto encontrado na categoria Prata 925.'); ?></p>
             <?php endif; ?>
         </div>
     </section>
-</main>
 
-<?php get_footer(); ?>
+    <section class="section-social">
+        <div class="container">
+            <div class="social-top">
+                <a href="#" class="social-link">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-social.webp" alt="Logotipo Lorá">
+                    <span>lorasemijoiasepratas</span>
+                </a>
+
+                <a href="#" class="btn">seguir</a>
+            </div>
+        </div>
+
+        <div class="social-bottom"></div>
+    </section>
+</main><?php get_footer(); ?>

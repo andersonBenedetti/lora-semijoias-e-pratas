@@ -24,7 +24,7 @@ register_nav_menus([
 
 function lora_loop_shop_per_page()
 {
-    return 15;
+    return 32;
 }
 add_filter('loop_shop_per_page', 'lora_loop_shop_per_page');
 
@@ -36,15 +36,22 @@ function format_products($products)
             'name' => $product->get_name(),
             'img' => wp_get_attachment_image_src($product->get_image_id())[0],
             'link' => $product->get_permalink(),
-            'price' => $product->get_price_html(),
+            'price' => is_user_logged_in()
+                ? $product->get_price_html()
+                : '<span class="login-to-see-price">Faça o login para visualizar os valores</span>',
         ];
     }
     return $products_final;
 }
 
-function lora_product_list($products)
+function lora_product_list($products, $extra_class = '')
 {
-    echo '<ul class="products-list carousel-product">';
+    $class = 'products-list';
+    if (!empty($extra_class)) {
+        $class .= ' ' . esc_attr($extra_class);
+    }
+
+    echo '<ul class="' . $class . '">';
     foreach ($products as $product) { ?>
         <li class="product-item">
             <a href="<?= esc_url($product['link']); ?>">
