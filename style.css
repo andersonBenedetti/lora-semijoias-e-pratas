@@ -698,6 +698,81 @@ ul {
     margin-bottom: 30px;
   }
 }
+#pg-home .section-categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 50px 0;
+}
+@media (max-width: 1024px) {
+  #pg-home .section-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+#pg-home .section-categories .categories-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+@media (max-width: 1024px) {
+  #pg-home .section-categories .categories-item {
+    height: 300px;
+  }
+}
+#pg-home .section-categories .categories-item span {
+  font-weight: 600;
+  font-size: 2em;
+  line-height: 1;
+  letter-spacing: 0.11px;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s ease, text-shadow 0.3s ease;
+}
+@media (max-width: 1024px) {
+  #pg-home .section-categories .categories-item span {
+    font-size: 1em;
+  }
+}
+#pg-home .section-categories .categories-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  transition: background 0.4s ease;
+  z-index: 1;
+}
+#pg-home .section-categories .categories-item:hover {
+  transform: scale(1.02);
+}
+#pg-home .section-categories .categories-item:hover::before {
+  background: rgba(0, 0, 0, 0.55);
+}
+#pg-home .section-categories .categories-item:hover span {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+#pg-home .section-categories .categories-item:nth-child(1) {
+  background-image: url("./img/brincos.webp");
+}
+#pg-home .section-categories .categories-item:nth-child(2) {
+  background-image: url("./img/colares.webp");
+}
+#pg-home .section-categories .categories-item:nth-child(3) {
+  background-image: url("./img/aneis.webp");
+}
+#pg-home .section-categories .categories-item:nth-child(4) {
+  background-image: url("./img/pulseiras.webp");
+}
 
 @media (max-width: 768px) {
   #pg-home .carousel-home .mbl {

@@ -184,3 +184,14 @@ $font-primary: "Livvic", sans-serif;
   font-weight: 400;
   line-height: 29.82px;
 }
+
+@mixin title-categories {
+  font-weight: 600;
+  font-size: 2em;
+  line-height: 1;
+  letter-spacing: 0.11px;
+
+  @media (max-width: 1024px) {
+    font-size: 1em;
+  }
+}

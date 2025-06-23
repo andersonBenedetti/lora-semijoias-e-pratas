@@ -69,6 +69,13 @@ $data['prata-925'] = format_products($products_prata);
         </div>
     </section>
 
+    <section class="section-categories">
+        <a class="categories-item" href="#"><span>Brincos</span></a>
+        <a class="categories-item" href="#"><span>Colares</span></a>
+        <a class="categories-item" href="#"><span>Anéis</span></a>
+        <a class="categories-item" href="#"><span>Pulseiras</span></a>
+    </section>
+
     <section class="products-shop secondary">
         <div class="container">
             <h2 class="title-section">Prata 925</h2>
