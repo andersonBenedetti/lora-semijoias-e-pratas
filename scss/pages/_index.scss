@@ -1,11 +1,15 @@
 #page-template {
   padding: 50px 0;
+  background-color: $background-index;
 
   .intro {
-    h1 {
-      @include title-section;
-      text-align: center;
-      padding: 0 20px;
+    max-width: 1400px;
+    margin: 20px auto;
+    margin-bottom: 20px;
+    padding: 0 20px;
+
+    @media (max-width: 1400px) {
+      padding: 0;
     }
   }
 
@@ -19,22 +23,75 @@
     max-width: 1400px;
     margin: 20px auto;
 
-    /* INFOS */
-    .woocommerce-form-coupon-toggle {
-      width: 100%;
+    .woocommerce-form-login-toggle {
+      padding: 0 20px;
+      @media (max-width: 1400px) {
+        padding: 0;
+      }
+
+      .woocommerce-info {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        border-top-color: transparent !important;
+        color: $primary-color !important;
+        background-color: $white;
+        border-radius: 10px;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          top: 1em;
+          left: 1.5em;
+          width: 20px;
+          height: 20px;
+          background-image: url(./img/icons/user.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
     }
 
-    .woocommerce-info {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-      border-top-color: $black !important;
+    .woocommerce-form-coupon-toggle {
+      width: 100%;
+      padding: 0 20px;
+
+      @media (max-width: 1400px) {
+        padding: 0;
+      }
+
+      .woocommerce-info {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        border-top-color: transparent !important;
+        color: $primary-color !important;
+        background-color: $white;
+        border-radius: 10px;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          top: 1em;
+          left: 1.5em;
+          width: 20px;
+          height: 20px;
+          background-image: url(./img/icons/ticket.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
     }
 
     .woocommerce-info::before,
     .woocommerce-info a {
-      color: $black !important;
+      color: $primary-color !important;
     }
 
     .woocommerce-error::after,

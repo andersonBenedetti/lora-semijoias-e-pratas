@@ -3,8 +3,9 @@
 }
 
 input#coupon_code {
-  border: 1px solid $black !important;
+  border: 1px solid $border-input !important;
   border-radius: 5px !important;
+  background-color: $white;
   padding: 8px 10px !important;
   font-family: $font-primary;
   font-size: 16px;
@@ -24,6 +25,12 @@ p#billing_country_field {
   width: 48%;
   float: left;
   padding: 15px;
+
+  h3 {
+    @include title-section;
+    color: $primary-color;
+    text-transform: uppercase;
+  }
 }
 
 .woocommerce .woocommerce-checkout .col2-set .col-1,
@@ -39,6 +46,20 @@ p#billing_country_field {
   padding: 15px;
   font-size: 18px;
   font-weight: bold;
+}
+
+.woocommerce-checkout-review-order .woocommerce-checkout-payment {
+  background-color: $white !important;
+
+  .woocommerce-info {
+    border-top-color: $primary-color;
+  }
+}
+
+#order_review_heading {
+  @include title-section;
+  color: $primary-color;
+  text-transform: uppercase;
 }
 
 .woocommerce form .form-row label {
@@ -64,7 +85,8 @@ p#order_comments_field label,
 .woocommerce-checkout .xs-checkout-form input,
 .woocommerce form .form-row textarea,
 .select2-container--default .select2-selection--single {
-  border: 1px solid $black !important;
+  border: 1px solid $border-input !important;
+  background-color: $white;
   border-radius: 5px;
   padding: 10px;
 }
@@ -77,7 +99,7 @@ p#order_comments_field label,
   border-radius: 5px;
   background-color: transparent;
   border: 1px solid #666;
-  padding: 8px 15px;
+  padding: 3px 15px;
 }
 
 .select2-container--default
@@ -94,7 +116,17 @@ p#order_comments_field label,
   margin-bottom: 50px;
 
   #place_order {
-    background-color: $black;
+    width: 100%;
+    background-color: $btn-checkout;
+    color: $white;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    padding: 20px 0;
+    margin-top: 20px;
   }
 }
 
@@ -116,7 +148,7 @@ label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
 .select2-container--default
   .select2-selection--single
   .select2-selection__arrow {
-  top: 9px !important;
+  top: 3px !important;
 }
 
 .woocommerce-checkout::after {
@@ -143,6 +175,10 @@ label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
     width: 100%;
     height: 100%;
   }
+}
+
+.woocommerce table.shop_table {
+  background-color: $white;
 }
 
 .woocommerce-table__product-name.product-name a {
