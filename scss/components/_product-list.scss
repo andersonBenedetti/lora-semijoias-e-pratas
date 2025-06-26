@@ -1,14 +1,39 @@
 .products-list {
   .product-item {
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+      .product-img {
+        img {
+          transform: scale(1.05);
+        }
+      }
+
+      .product-title {
+        color: darken($title-product-color, 10%);
+      }
+
+      .login-to-see-price {
+        background-color: darken($btn-product, 5%);
+        color: lighten($primary-color, 5%);
+      }
+    }
+
     .product-img {
       width: 100%;
       height: 417px;
       border: 1px solid $border-product;
+      overflow: hidden;
 
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: transform 0.4s ease;
       }
 
       @media (max-width: 768px) {
@@ -20,11 +45,22 @@
       @include title-product;
       color: $title-product-color;
       margin: 10px 0;
+      transition: color 0.3s ease;
     }
 
     .product-price {
       @include price-product;
       color: $black;
+
+      del {
+        @include price-promotional;
+        color: $title-product-color;
+      }
+
+      ins {
+        display: block;
+        text-decoration: none;
+      }
     }
 
     .login-to-see-price {
@@ -36,6 +72,7 @@
       @include btn-product;
       color: $primary-color;
       text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
   }
 
@@ -43,6 +80,11 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 100px 20px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px 20px;
+    }
   }
 
   &.carousel-product {
