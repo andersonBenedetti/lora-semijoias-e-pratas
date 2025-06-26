@@ -132,12 +132,14 @@
       padding: 0 16px !important;
 
       > a {
-        background-color: $black;
-        border-radius: 5px;
-        font-size: 1em;
-        font-weight: bold;
-        letter-spacing: 0.1em;
+        background-color: $primary-color;
         color: $white;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 1em;
+        line-height: 1;
+        letter-spacing: 0;
+        text-transform: uppercase;
       }
     }
   }
